@@ -44,6 +44,7 @@ class MediaServerMsg(_PluginBase):
     # 拼装消息内容
     _webhook_actions = {
         "library.new": "新入库",
+        "library.delete": "删除",
         "system.webhooktest": "测试",
         "playback.start": "开始播放",
         "playback.stop": "停止播放",
@@ -86,6 +87,7 @@ class MediaServerMsg(_PluginBase):
         """
         types_options = [
             {"title": "新入库", "value": "library.new"},
+            {"title": "删除", "value": "library.delete"},
             {"title": "开始播放", "value": "playback.start|media.play|PlaybackStart"},
             {"title": "停止播放", "value": "playback.stop|media.stop|PlaybackStop"},
             {"title": "用户标记", "value": "item.rate"},
